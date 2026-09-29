@@ -145,7 +145,7 @@ export function renderStudentApp(root, data, selectedMemberId = null) {
         <div class="section-heading"><h2 id="history-heading">Meeting history</h2><span>Counted Mondays only</span></div>
         ${history ? `<ul class="history-list">${history}</ul>` : `<div class="empty-card">Your attendance starts the first time you are marked here at a counted Monday meeting.</div>`}
       </section>
-      <p class="coach-note">If anything looks wrong, contact your coach.</p>`;
+      `;
     return;
   }
 
@@ -161,13 +161,12 @@ export function renderStudentApp(root, data, selectedMemberId = null) {
   })).filter((group) => group.members.length > 0);
 
   root.innerHTML = `
-    <div class="intro"><p class="eyebrow">Your club, your record</p><h1>Check your attendance.</h1><p>Choose your name to see your percentage, your first counted meeting, and the Mondays included in your total.</p></div>
     <div class="roster-groups">${groups.map((group) => `
       <section class="event-group" aria-label="${escapeHtml(group.label)}">
         <div class="event-heading"><span>${escapeHtml(group.label)}</span><span class="event-count">${group.members.length} ${group.members.length === 1 ? "student" : "students"}</span></div>
         <div class="student-list">${group.members.map((member) => `<button class="student-choice" type="button" data-action="select" data-member-id="${escapeHtml(member.id)}"><span>${escapeHtml(member.name)}</span><span class="choice-arrow" aria-hidden="true">›</span></button>`).join("")}</div>
       </section>`).join("")}</div>
-    <p class="privacy-note">No sign-in is required. The roster is shared, so anyone with this link can select a name.</p>`;
+    <p class="privacy-note">Attendance is visible to anyone with this link.</p>`;
 }
 
 export async function startStudentApp(root) {

@@ -52,7 +52,7 @@ button { font: inherit; }
 .portal-label { display: inline-flex; align-items: center; gap: 8px; color: #66746c; font-size: 10px; font-weight: 700; letter-spacing: 0.13em; }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #78a982; box-shadow: 0 0 0 3px #e1eee2; }
 
-.main-content { min-height: calc(100vh - 148px); padding: 50px 0 60px; }
+.main-content { min-height: calc(100vh - 148px); padding: 22px 0 36px; }
 .intro { margin: 0 0 26px; }
 .eyebrow { margin: 0 0 10px; color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
@@ -117,7 +117,6 @@ h1, h2, h3 { font-family: Manrope, "DM Sans", sans-serif; }
 .meeting-status.here::before { background: #53a477; }
 .meeting-status.away { color: #9b613f; }
 .meeting-status.away::before { background: #e69c68; }
-.coach-note { margin: 18px 0 0; padding: 14px 16px; border-left: 3px solid var(--orange); border-radius: 0 10px 10px 0; background: #fff8f1; color: #765d4b; font-size: 12px; line-height: 1.6; }
 
 .empty-card, .error-card, .loading-card { display: flex; align-items: center; gap: 12px; padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: white; color: var(--muted); font-size: 14px; line-height: 1.6; }
 .error-card { display: block; border-color: #f1d7cb; color: #904c34; }
@@ -132,7 +131,7 @@ h1, h2, h3 { font-family: Manrope, "DM Sans", sans-serif; }
   .page-shell { width: min(100% - 28px, 900px); }
   .site-header { min-height: 70px; }
   .portal-label { font-size: 9px; letter-spacing: 0.1em; }
-  .main-content { min-height: calc(100vh - 130px); padding: 35px 0 42px; }
+  .main-content { min-height: calc(100vh - 130px); padding: 18px 0 28px; }
   .student-list { grid-template-columns: 1fr; }
   .student-choice:nth-child(odd):not(:last-child) { border-right: 0; }
   .profile-heading { gap: 8px; }

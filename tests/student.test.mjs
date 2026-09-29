@@ -65,10 +65,11 @@ test("exactly 75 percent passes once that Monday arrives", () => {
   assert.equal(stats.percent, 75);
 });
 
-test("student screen has no editing controls or admin link and escapes names", () => {
+test("student roster is concise, read-only, and escapes names", () => {
   const root = { innerHTML: "" };
   renderStudentApp(root, { members: [{ ...member, name: "<img src=x onerror=alert(1)>" }] });
-  assert.match(root.innerHTML, /Check your attendance/);
+  assert.doesNotMatch(root.innerHTML, /Check your attendance|Your club, your record|Choose your name/);
+  assert.match(root.innerHTML, /Attendance is visible to anyone with this link/);
   assert.doesNotMatch(root.innerHTML, /add_member|admin|href=/i);
   assert.match(root.innerHTML, /&lt;img src=x onerror=alert\(1\)&gt;/);
 });
